@@ -142,5 +142,20 @@ if (porcentagem < 0 || porcentagem > 100) {
 } else if (porcentagem < 50) {
   console.log("Nota F");
 
-
 }
+
+// oitavo exercicio
+
+let numero1 = 1
+let numero2 = 9
+let numero3 = 3
+
+if (numero1 % 2 == 0 || numero2 % 2 == 0 || numero3 % 2 ==0) {
+  console.log("Tem um numero par")
+} else {
+  console.log("Não tem nenhum numero par")
+}
+
+// nono exercicio
+
+
