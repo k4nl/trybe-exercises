@@ -1,7 +1,7 @@
 // primeiro exercicio
 
-let a = 10
-let b = 20
+let a = 1
+let b = 2
 
 let soma = a + b;
 console.log(soma);
@@ -67,3 +67,18 @@ else {
 }
 
 // quinto exercicio
+
+let angulo1 = 170;
+let angulo2 = 5;
+let angulo3 = 5;
+let somaAngulo = angulo1 + angulo2 + angulo3
+
+if (angulo1 > 0 && angulo2 > 0 && angulo3 > 0) {
+    if (angulo1 + angulo2 +angulo3 === 180) {
+    console.log(true);
+    } else {
+    console.log(false);
+    };
+} else { 
+    console.log("Angulo Inválido")
+}
