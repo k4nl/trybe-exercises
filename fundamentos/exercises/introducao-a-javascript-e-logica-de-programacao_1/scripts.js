@@ -1,7 +1,7 @@
 // primeiro exercicio
 
-let a = 1
-let b = 2
+let a = 1;
+let b = 2;
 
 let soma = a + b;
 console.log(soma);
@@ -10,7 +10,7 @@ let subtracao = a - b;
 console.log(subtracao);
 
 let multiplicacao = a * b;
-console.log(multiplicacao)
+console.log(multiplicacao);
 
 let divisao = a / b;
 console.log(divisao);
@@ -20,36 +20,36 @@ console.log(modulo);
 
 // segundo exercicio
 
-let x = 2
-let y = 1
+let x = 2;
+let y = 1;
 
 if (x > y) {
-    console.log(x)
+    console.log(x);
 }
 else if (x < y) {
-    console.log(y)
+    console.log(y);
 }
 else {
-    console.log("os numeros são iguais!")
+    console.log("os numeros são iguais!");
 }
 
 // terceiro exercicio
 
-let e = 1
-let r = 2
-let t = 3
+let e = 1;
+let r = 2;
+let t = 3;
 
 if (e > r && e > t) {
-    console.log(e)
+    console.log(e);
 }
 else if (r > e && r > t) {
-    console.log(r)
+    console.log(r);
 }
 else if (t > e && t > r) {
-    console.log(t)
+    console.log(t);
 }
 else {
-    console.log("não existe numero maior!")
+    console.log("não existe numero maior!");
 }
 
 // quarto exercicio
@@ -57,13 +57,13 @@ else {
 let numero;
 
 if (numero > 0) {
-    console.log("positive")
+    console.log("positive");
 }
 else if (numero < 0) {
-    console.log("negative")
+    console.log("negative");
 }
 else {
-    console.log("zero")
+    console.log("zero");
 }
 
 // quinto exercicio
@@ -71,7 +71,7 @@ else {
 let angulo1 = 170;
 let angulo2 = 5;
 let angulo3 = 5;
-let somaAngulo = angulo1 + angulo2 + angulo3
+let somaAngulo = angulo1 + angulo2 + angulo3;
 
 if (angulo1 > 0 && angulo2 > 0 && angulo3 > 0) {
     if (angulo1 + angulo2 +angulo3 === 180) {
@@ -80,7 +80,7 @@ if (angulo1 > 0 && angulo2 > 0 && angulo3 > 0) {
     console.log(false);
     };
 } else { 
-    console.log("Angulo Inválido")
+    console.log("Angulo Inválido");
 }
 
 // sexto exercicio
@@ -119,7 +119,7 @@ switch (peca.toLowerCase()) {
 
 // setimo exercicio
 
-let porcentagem = 120
+let porcentagem = 120;
 
 if (porcentagem < 0 || porcentagem > 100) {
   console.log("Erro");
@@ -146,16 +146,25 @@ if (porcentagem < 0 || porcentagem > 100) {
 
 // oitavo exercicio
 
-let numero1 = 1
-let numero2 = 9
-let numero3 = 3
+let numero1 = 1;
+let numero2 = 9;
+let numero3 = 3;
 
 if (numero1 % 2 == 0 || numero2 % 2 == 0 || numero3 % 2 ==0) {
-  console.log("Tem um numero par")
+  console.log("Tem um numero par");
 } else {
-  console.log("Não tem nenhum numero par")
+  console.log("Não tem nenhum numero par");
 }
 
 // nono exercicio
 
+let compra = 10;
+let venda = 0;
+let valorCustoTotal = compra * 1.2;
+let lucro = venda - valorCustoTotal;
 
+if (compra < 0 || venda < 0) {
+  console.log ("Erro");
+} else {
+  console.log (lucro * 1000);
+}
