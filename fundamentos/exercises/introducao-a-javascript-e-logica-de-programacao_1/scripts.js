@@ -32,3 +32,22 @@ else if (x < y) {
 else {
     console.log("os numeros são iguais!")
 }
+
+//terceiro exercicio
+
+let e = 3
+let r = 2
+let t = 3
+
+if (e > r && e > t) {
+    console.log(e)
+}
+else if (r > e && r > t) {
+    console.log(r)
+}
+else if (t > e && t > r) {
+    console.log(t)
+}
+else {
+    console.log("não existe numero maior!")
+}
