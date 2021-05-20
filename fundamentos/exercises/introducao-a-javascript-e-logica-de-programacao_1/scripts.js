@@ -82,3 +82,37 @@ if (angulo1 > 0 && angulo2 > 0 && angulo3 > 0) {
 } else { 
     console.log("Angulo Inválido")
 }
+
+// sexto exercicio
+
+let peca = "rei";
+
+switch (peca.toLowerCase()) {
+  case "rei":
+    console.log("O rei só pode andar uma casa e para qualquer direção.");
+    break;
+
+  case "rainha":
+    console.log("A rainha pode andar quantas casas quiser e para qualquer direção.");
+    break;
+
+  case "bispo":
+    console.log("O bispo pode andar quantas casas quiser mas somente na diagonal.");
+    break;
+
+  case "peão":
+  console.log("O peão so pode andar uma casa mas somente para frente, exceto quando for eliminar uma peça inimiga e na primeira rodada, quando ele pode andar duas casas para frente.");
+  break;
+
+  case "torre":
+    console.log("A torre pode andar quantas casas quiser mas somente de forma vertical e horizontal.");
+    break;
+
+  case "cavalo":
+    console.log("O cavalo anda em L, ou seja, duas casas para qualquer direção e depois mais uma em sentido perpendicular. É a única peça que pode saltar sobre as outras.");
+    break;
+
+  default:
+    console.log("Erro, peça não encontrada!")
+    break;
+}
