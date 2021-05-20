@@ -150,13 +150,28 @@ let numero1 = 1;
 let numero2 = 9;
 let numero3 = 3;
 
-if (numero1 % 2 == 0 || numero2 % 2 == 0 || numero3 % 2 ==0) {
-  console.log("Tem um numero par");
+if (numero1 % 2 === 0 || numero2 % 2 === 0 || numero3 % 2 === 0) {
+  console.log(true);
+
 } else {
-  console.log("Não tem nenhum numero par");
+  console.log(false);
 }
 
 // nono exercicio
+
+let number1 = 1;
+let number2 = 9;
+let number3 = 3;
+
+if (number1 % 2 !== 0 || number2 % 2 !== 0 || number3 % 2 !== 0) {
+  console.log(true);
+
+} else {
+  console.log(false);
+}
+
+
+// decimo exercicio
 
 let compra = 10;
 let venda = 0;
@@ -168,3 +183,5 @@ if (compra < 0 || venda < 0) {
 } else {
   console.log (lucro * 1000);
 }
+
+
