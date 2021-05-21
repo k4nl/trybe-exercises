@@ -15,10 +15,25 @@ for (let i = 0; i < numbers.length; i += 1) {
 console.log(soma)
 
 // exercicio 3
+
 let somatorio = 0
 
 for (let i = 0; i < numbers.length; i += 1) {
   somatorio = numbers[i] + somatorio;
 }
 console.log(somatorio / numbers.length)
+
+// exercicio 4
+
+if (( somatorio / numbers.length) > 20) {
+  console.log("valor maior que 20");
+} else {
+  console.log("valor menor ou igual a 20")
+}
+
+
+
+
+
+
 
