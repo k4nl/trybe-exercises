@@ -60,6 +60,14 @@ if (contador > 0) {
 
 // exercicio 7
 
+let menorNumero = numbers[0]
+
+for (let i = 0; i < numbers.length; i+= 1) {
+  if ((numbers[i] < menorNumero)) {
+    menorNumero = numbers[i];
+  }
+}
+console.log(menorNumero);
 
 // exercicio 8
 // exercicio 9
