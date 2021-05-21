@@ -13,3 +13,12 @@ for (let i = 0; i < numbers.length; i += 1) {
   soma = numbers[i] + soma;
 }
 console.log(soma)
+
+// exercicio 3
+let somatorio = 0
+
+for (let i = 0; i < numbers.length; i += 1) {
+  somatorio = numbers[i] + somatorio;
+}
+console.log(somatorio / numbers.length)
+
