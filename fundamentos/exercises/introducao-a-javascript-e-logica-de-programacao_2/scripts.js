@@ -40,4 +40,28 @@ for (let i = 0; i < numbers.length; i+= 1) {
     maiorNumero = numbers[i];
   }
 }
-console.log(maiorNumero)
+console.log(maiorNumero);
+
+// exercicio 6
+
+let contador = 0;
+
+for (let i = 0; i < numbers.length; i+=1) {
+  if (numbers[i] % 2 !== 0){
+    contador += 1;
+  }
+}
+
+if (contador > 0) {
+  console.log(contador);
+} else {
+  console.log("nenhum valor ímpar encontrado");
+}
+
+// exercicio 7
+
+
+// exercicio 8
+// exercicio 9
+
+
