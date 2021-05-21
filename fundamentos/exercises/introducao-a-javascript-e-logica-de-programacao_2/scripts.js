@@ -70,6 +70,15 @@ for (let i = 0; i < numbers.length; i+= 1) {
 console.log(menorNumero);
 
 // exercicio 8
+let array = []
+
+for (let i = 0; i < 25; i+= 1) {
+  array.push(i);
+}
+console.log(array);
+
+
+
 // exercicio 9
 
 
