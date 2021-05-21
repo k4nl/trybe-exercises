@@ -31,9 +31,13 @@ if (( somatorio / numbers.length) > 20) {
   console.log("valor menor ou igual a 20")
 }
 
+// exercicio 5
 
+let maiorNumero = numbers[0]
 
-
-
-
-
+for (let i = 0; i < numbers.length; i+= 1) {
+  if ((maiorNumero < numbers[i])) {
+    maiorNumero = numbers[i];
+  }
+}
+console.log(maiorNumero)
