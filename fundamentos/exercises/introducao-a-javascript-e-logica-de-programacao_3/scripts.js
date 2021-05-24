@@ -17,3 +17,20 @@ for (let i = 0; i < n; i += 1) {
 for (let i = 0; i < n; i += 1) {
     console.log(linha)
 }
+
+// ______________________________________________________________________________________________
+//  exercicio 2 
+
+// Para o segundo exercício, faça o mesmo que antes, 
+// mas que imprima um triângulo retângulo com 5 asteriscos de base
+
+let n1 = 5;
+let simbolo1 = '*';
+let linha1 = '';
+
+// contando a quantidade de caracteres necessarios em cada linha (n)
+
+for (let i = 0; i <= n1; i += 1) {
+    console.log (linha1)
+    linha1 = linha1 + simbolo1 
+}
