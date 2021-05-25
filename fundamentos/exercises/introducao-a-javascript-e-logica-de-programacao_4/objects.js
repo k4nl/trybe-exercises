@@ -17,3 +17,9 @@ console.log(info.recorrente);
 for (let key in info) {
   console.log(key);
 }
+
+// Exercicio 4
+
+for (let key in info) {
+  console.log(info[key]);
+}
