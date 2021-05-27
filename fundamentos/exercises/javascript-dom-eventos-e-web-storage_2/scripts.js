@@ -63,19 +63,21 @@ for (let i = 0; i < 3; i += 1) {
 //_______________________________________________________________________________
 
 // Remoções exercicio 1
+
 let title = document.getElementsByTagName('h1')[0]
 title.className = 'title'
 
-
 // Remoções exercicio 2
+
 let description = document.getElementsByTagName('h3')
 for (let i = 0; i < 3; i += 1) {
   description[i].className = 'description'
 }
 
-
 // Remoções exercicio 3
 
+let elementContentLeft = document.getElementsByClassName('left-content')[0];
+elementDivMain.removeChild(elementContentLeft);
 
 
 // Remoções exercicio 4
