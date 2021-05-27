@@ -34,3 +34,9 @@ let elementDivRight = document.createElement('right');
 elementDivRight.className = 'right-content';
 elementDivMain.appendChild(elementDivRight);
 
+// exercicio 7
+
+let elementImg = document.createElement('img');
+elementImg.className = 'small-image';
+elementImg.src = 'https://picsum.photos/200';
+elementDivLeft.appendChild(elementImg);
