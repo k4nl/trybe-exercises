@@ -30,6 +30,7 @@ elementDivMain.appendChild(elementDivLeft);
 
 // exercicio 6
 
-
-
+let elementDivRight = document.createElement('right');
+elementDivRight.className = 'right-content';
+elementDivMain.appendChild(elementDivRight);
 
