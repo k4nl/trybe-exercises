@@ -17,9 +17,19 @@ elementDivCenter.className = 'center-content';
 elementDivMain.appendChild(elementDivCenter);
 
 // exercicio 4
+
 let elementP = document.createElement('p');
 elementP.textContent = 'Oliva não gosta de queijo e nem de toucinho';
 elementDivCenter.appendChild(elementP);
+
+// exercicio 5
+
+let elementDivLeft = document.createElement('left')
+elementDivLeft.className = 'left-content';
+elementDivMain.appendChild(elementDivLeft);
+
+// exercicio 6
+
 
 
 
