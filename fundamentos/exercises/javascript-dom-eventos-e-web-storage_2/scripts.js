@@ -60,3 +60,30 @@ for (let i = 0; i < 3; i += 1) {
   elementDivMain.appendChild(elementH3)
 }
 
+//_______________________________________________________________________________
+
+// Remoções exercicio 1
+let title = document.getElementsByTagName('h1')[0]
+title.className = 'title'
+
+
+// Remoções exercicio 2
+let description = document.getElementsByTagName('h3')
+for (let i = 0; i < 3; i += 1) {
+  description[i].className = 'description'
+}
+
+
+// Remoções exercicio 3
+
+
+
+// Remoções exercicio 4
+
+
+
+// Remoções exercicio 5
+
+
+
+// Remoções exercicio 6
