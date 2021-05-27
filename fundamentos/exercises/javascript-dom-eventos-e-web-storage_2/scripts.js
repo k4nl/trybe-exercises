@@ -40,3 +40,16 @@ let elementImg = document.createElement('img');
 elementImg.className = 'small-image';
 elementImg.src = 'https://picsum.photos/200';
 elementDivLeft.appendChild(elementImg);
+
+// exercicio 8
+
+let elementUl = document.createElement('ul');
+elementDivRight.appendChild(elementUl);
+let arrayNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis','Sete', 'Oito', 'Nove', 'Dez']
+for (let num in arrayNumbers) {
+  let elementLi = document.createElement('li');
+    elementLi.innerHTML = arrayNumbers[num];
+    elementUl.appendChild(elementLi);
+}
+
+// exercicio 9
