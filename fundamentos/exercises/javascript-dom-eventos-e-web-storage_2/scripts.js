@@ -6,13 +6,13 @@ document.body.appendChild(elementH1);
 
 // exercicio 2
 
-let elementDivMain = document.createElement('main');
+let elementDivMain = document.createElement('div');
 elementDivMain.className = 'main-content';
 document.body.appendChild(elementDivMain);
 
 // exercicio 3
 
-let elementDivCenter = document.createElement('center');
+let elementDivCenter = document.createElement('div');
 elementDivCenter.className = 'center-content';
 elementDivMain.appendChild(elementDivCenter);
 
@@ -24,13 +24,13 @@ elementDivCenter.appendChild(elementP);
 
 // exercicio 5
 
-let elementDivLeft = document.createElement('left')
+let elementDivLeft = document.createElement('div')
 elementDivLeft.className = 'left-content';
 elementDivMain.appendChild(elementDivLeft);
 
 // exercicio 6
 
-let elementDivRight = document.createElement('right');
+let elementDivRight = document.createElement('div');
 elementDivRight.className = 'right-content';
 elementDivMain.appendChild(elementDivRight);
 
@@ -82,10 +82,16 @@ elementDivMain.removeChild(elementContentLeft);
 
 // Remoções exercicio 4
 
-
+let elementContentRight = document.getElementsByClassName('right-content')[0];
+elementContentRight.style.marginRight = 'auto';
 
 // Remoções exercicio 5
 
-
+let elementCenterContent = document.getElementsByClassName('center-content')[0];
+elementCenterContent.parentNode.style.backgroundColor = 'green'
 
 // Remoções exercicio 6
+
+elementUl.lastChild.remove();
+elementUl.lastChild.remove();
+
