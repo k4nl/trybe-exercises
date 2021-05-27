@@ -10,3 +10,10 @@ let elementDivMain = document.createElement('main');
 elementDivMain.className = 'main-content';
 document.body.appendChild(elementDivMain);
 
+// exercicio 3
+
+let elementDivCenter = document.createElement('center');
+elementDivCenter.className = 'center-content';
+elementDivMain.appendChild(elementDivCenter);
+
+
