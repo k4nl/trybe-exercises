@@ -6,3 +6,7 @@ document.body.appendChild(elementH1);
 
 // exercicio 2
 
+let elementDivMain = document.createElement('main');
+elementDivMain.className = 'main-content';
+document.body.appendChild(elementDivMain);
+
