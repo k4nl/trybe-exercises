@@ -53,3 +53,10 @@ for (let num in arrayNumbers) {
 }
 
 // exercicio 9
+
+for (let i = 0; i < 3; i += 1) {
+  let elementH3 = document.createElement('h3');
+  elementH3.innerHTML = 'Salve ' + i +' Salgadin';
+  elementDivMain.appendChild(elementH3)
+}
+
