@@ -34,3 +34,23 @@ for (let i = 0; i <= n1; i += 1) {
     console.log (linha1)
     linha1 = linha1 + simbolo1 
 }
+
+// exercicio 3 
+
+let number = 5;
+let symbol = '*';
+let line = '';
+let p = number;
+
+for (let i = 0; i < number; i += 1) {
+	for (let index = 0; index <= number; i += 1) {
+		if (index < p) {
+			line = line + ' ';
+		} else {
+			line = line + symbol;
+		}
+	}
+	console.log(line);
+	line = '';
+	ṕ -= 1;
+};
