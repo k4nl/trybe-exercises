@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="form-header">
+        <h1>Cadastro de Currículos</h1>
+        <p>Preencha os campos abaixo</p>
+    </header>
+    <main>
+        <form class="cv-form">
+            <div class ="form-row">
+                <fieldset>
+                    <div class="line-content">
+                        <label for="name">Nome: </label>
+                        <input type="text" name="name" id="name" maxlength="40" required>
+                    </div>
+                    <div class ="line-content">
+                        <label for="email">E-mail: </label>
+                        <input class="email-input" type="email" id="email" name="email" maxlength="50" required>
+                    </div>
+                    <div class="line-content">
+                        <label for="cpf-number">CPF: </label>
+                        <input type="text" id="cpf-number" name="cpf" maxlength="11" required>
+                    </div>
+                    <div class="line-content">
+                        <label for="adress">Endereço: </label>
+                        <input type="text" id="adress" name="adress" maxlength="200" required>
+                    </div>
+                    <div class="line-content">
+                        <label for="city">Cidade: </label>
+                        <input type="text" id="city" name="city" maxlength="200" required>
+                    </div>
+                    <div class="line-content">
+                        <label for="state">Estado: </label>
+                        <select id="state" name="state" required>
+                            <option selected value>Selecione seu estado: </option>
+                        </select>
+                    </div>
+					<div class="line-content">
+					<fieldset class="fildset-imovel">
+						<legend>Imóvel</legend>
+						<label for="house-type">Casa</label>
+						<input type="radio" name="house-type" id="house" value="house" required>
+						<label for="house-type">Apartamento</label>
+						<input type="radio" name="house-type" id="apartment" value="apartment" required>
+					</fieldset>
+					</div>
+                </fieldset>
+            </div>
+				<div class ="form-row">
+					<fieldset>
+						<div class="line-content">
+							<label for="resume">Currículo</label>
+							<textarea id="resume" name="resume" maxlength="1000" cols="100" rows="20" required></textarea>
+						</div>
+						<div class="line-content">
+							<label for="role">Cargo: </label>
+							<input type="text" id="role" name="role" maxlength="40" required></input>
+						</div>
+						<div class="line-content">
+							<label for="roleDescription">Descrição: </label>
+							<input type="text" id="roleDescription" name="roleDescription" maxlength="500" required></input>
+						</div>
+						<div class="line-content">
+							<label for="startDate">Data de Inicio: </label>
+							<input type="date" id="startDate" name="startDate" value="" required></input>
+						</div>
+					</fieldset>
+					<button class="sumit-button" type="sumit">Enviar</button>
+					<button class="clear-button" type="reset">Limpar</button>
+				</div>
+        </form>
+    </main>
+    <footer></footer>   
+    <script src="script.js"></script>
+</body>
+</html>
