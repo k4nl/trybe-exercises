@@ -1,17 +1,91 @@
 body {
-
+  text-align: justify;
+  margin: 30px;
+  line-height: 30px;
+  align-items: center;
 }
+
 h1 {
-
+  font-size: 2em;
+  text-align: center;
 }
-h2 {
 
+h2 {
+  font-size: 1.7em;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2em;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 figure {
-    margin: 0;
+  margin: 5px;
+}
+
+figcaption {
+  font-size: 1em;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+
+  body {
+    background-color: lightblue;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1.7em;
+  }
+
+  .imagem {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  figure {
+    text-align: center;
+    justify-self: center;
+    width: 40%;
+    margin: 10px 10px;
+  }
+
+  figcaption {
+    font-size: 1.4em;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: lightpink;
+    margin: 90px;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  
+  h2 {
+    font-size: 2.5em;
+  }
+  
+  p {
+    font-size: 2em;
+  }
 }
