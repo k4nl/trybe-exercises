@@ -62,7 +62,28 @@ const gameActions = {
   turnResult: () => battleMembers,
 }
 
-gameActions.mageTurn('critico', mageDamage);
+function whoDiesFirst() {
+  let result = [];
+  for (let i = 0; i < 10; i += 1) {
+    while (dragon.healthPoints > 0 && mage.healthPoints > 0) {
+      gameActions.mageTurn('critico', mageDamage);
+      gameActions.dragonTurn(dragonDamage);
+    }
+    if (dragon.healthPoints < 0 && mage.healthPoints > 0) {
+      result.push('Mago');
+      mage.healthPoints = 130;
+    } if (dragon.healthPoints > 0 && mage.healthPoints < 0) {
+      result.push('Dragão');
+      dragon.healthPoints = 350;
+    }
+  } // toda vez que houver um vencedor, preciso colocar o nome do vencedor no array e preciso voltar com os valores de healthpoints para o dragon e mage, para que uma nova luta aconteça. 
+  return console.log(result);
+}
+
+whoDiesFirst();
+
+// aqui estão alguns testes, para usar cajado chama 'cajado', para tentar critico use 'critico';
+/* gameActions.mageTurn('critico', mageDamage);
 gameActions.dragonTurn(dragonDamage);
 gameActions.mageTurn('critico', mageDamage);
 gameActions.dragonTurn(dragonDamage);
@@ -71,6 +92,7 @@ gameActions.dragonTurn(dragonDamage);
 gameActions.mageTurn('critico', mageDamage);
 gameActions.dragonTurn(dragonDamage);
 console.log(gameActions.turnResult());
+*/
 
 /*
 1 - Crie a primeira HOF que compõe o objeto gameActions . Ela será a função que simula o turno do personagem warrior . Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem warrior e atualizará os healthPoints do monstro dragon . Além disto ela também deve atualizar o valor da chave damage do warrior .
