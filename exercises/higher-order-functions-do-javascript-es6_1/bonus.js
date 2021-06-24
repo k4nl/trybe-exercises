@@ -1,12 +1,11 @@
 const mage = {
-  healthPoints: 130,
+  healthPoints: 130, // 137 é o mais equilibrado
   intelligence: 45,
   mana: 125,
   cajado: 2, // entre 45 e 90
   cajadoCritico: 4, // 12 e 180
   damage: undefined,
-};
-
+}
 const warrior = {
   healthPoints: 200,
   strength: 30,
@@ -61,26 +60,39 @@ const gameActions = {
   },
   turnResult: () => battleMembers,
 }
-
+const defautMage = () => mage.healthPoints = 130;
+const defautDragon = () => dragon.healthPoints = 350;
+let result = [];
 function whoDiesFirst() {
-  let result = [];
-  for (let i = 0; i < 10; i += 1) {
+  for (let i = 0; i < 100000; i += 1) {
+    defautMage();
+    defautDragon();
     while (dragon.healthPoints > 0 && mage.healthPoints > 0) {
       gameActions.mageTurn('critico', mageDamage);
       gameActions.dragonTurn(dragonDamage);
     }
     if (dragon.healthPoints < 0 && mage.healthPoints > 0) {
       result.push('Mago');
-      mage.healthPoints = 130;
     } if (dragon.healthPoints > 0 && mage.healthPoints < 0) {
       result.push('Dragão');
-      dragon.healthPoints = 350;
     }
-  } // toda vez que houver um vencedor, preciso colocar o nome do vencedor no array e preciso voltar com os valores de healthpoints para o dragon e mage, para que uma nova luta aconteça. 
-  return console.log(result);
+  }
+}
+function winner() {
+  let countMage = 0;
+  let countDragon = 0;
+  for (let i = 0; i < result.length; i += 1) {
+    if (result[i] === 'Mago') {
+      countMage += 1;
+    } if (result[i] === 'Dragão') {
+      countDragon += 1;
+    }
+  }
+  console.log(`O mago venceu: ${countMage} vezes, e o Dragão venceu ${countDragon} vezes`);
 }
 
 whoDiesFirst();
+winner();
 
 // aqui estão alguns testes, para usar cajado chama 'cajado', para tentar critico use 'critico';
 /* gameActions.mageTurn('critico', mageDamage);
