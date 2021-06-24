@@ -2,6 +2,8 @@ const mage = {
   healthPoints: 130,
   intelligence: 45,
   mana: 125,
+  cajado: 2, // entre 45 e 90
+  cajadoCritico: 4, // 12 e 180
   damage: undefined,
 };
 
@@ -22,7 +24,8 @@ const dragonDamage = () => Math.floor(Math.random() * (dragon.strength - 15) + 1
 const warriorDamage = () => Math.floor(Math.random() * (warrior.strength - warrior.strength * warrior.weaponDmg) + warrior.strength * warrior.weaponDmg);
 const mageDamage = () => {
   const damageMana = {
-    dano: Math.floor(Math.random() * (mage.intelligence * 2 - mage.intelligence) + mage.intelligence),
+    critico: Math.floor(Math.random() * (mage.intelligence * mage.cajadoCritico - mage.intelligence) + mage.intelligence / 3),
+    dano: Math.floor(Math.random() * (mage.intelligence * mage.cajado - mage.intelligence) + mage.intelligence),
     mana: mage.mana -= 15,
   }
   if (damageMana.mana <= 15) {
@@ -31,18 +34,24 @@ const mageDamage = () => {
   }
   return damageMana;
 }
-const battleMembers = { mage, warrior, dragon };
+const battleMembers = { mage, dragon };
 const gameActions = {
   warriorTurn: (callbackWarrior) => {
     const warriorTurnDamage = callbackWarrior();
     dragon.healthPoints -= warriorTurnDamage;
     warrior.damage = warriorTurnDamage;
   },
-  mageTurn: (callbackMage) => {
+  mageTurn: (a, callbackMage) => {
     const mageTurnDamage = callbackMage();
+    if (a === 'cajado') {
     dragon.healthPoints -= mageTurnDamage.dano;
     mage.damage = mageTurnDamage.dano;
     mage.mana = mageTurnDamage.mana;
+    } if (a === 'critico') {
+      dragon.healthPoints -= mageTurnDamage.critico;
+      mage.damage = mageTurnDamage.critico;
+      mage.mana = mageTurnDamage.mana;
+    }
   },
   dragonTurn: (callbackDragon) => {
     const dragonTurnDamage = callbackDragon();
@@ -53,13 +62,13 @@ const gameActions = {
   turnResult: () => battleMembers,
 }
 
-gameActions.mageTurn(mageDamage);
+gameActions.mageTurn('critico', mageDamage);
 gameActions.dragonTurn(dragonDamage);
-gameActions.mageTurn(mageDamage);
+gameActions.mageTurn('critico', mageDamage);
 gameActions.dragonTurn(dragonDamage);
-gameActions.mageTurn(mageDamage);
+gameActions.mageTurn('critico', mageDamage);
 gameActions.dragonTurn(dragonDamage);
-gameActions.mageTurn(mageDamage);
+gameActions.mageTurn('critico', mageDamage);
 gameActions.dragonTurn(dragonDamage);
 console.log(gameActions.turnResult());
 
