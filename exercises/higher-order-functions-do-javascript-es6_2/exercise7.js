@@ -1,4 +1,5 @@
 const assert = require('assert');
+const { SourceMap } = require('module');
 
 const books = [
   {
@@ -67,8 +68,6 @@ const books = [
 
 const expectedResult = false;
 
-function authorUnique() {
-  // escreva seu código aqui
-}
+
 
 assert.strictEqual(authorUnique(), expectedResult);

@@ -1,29 +1,28 @@
-const mage = {
+const isCritico = () => Math.floor(Math.random() *10) +1;
+const mage = { // atributos do mago
   healthPoints: 130, // 137 é o mais equilibrado
   intelligence: 45,
   mana: 125,
   cajado: 2, // entre 45 e 90
-  cajadoCritico: 4, // 12 e 180
+  cajadoCritico: 4, // 12.5 e 180
   damage: undefined,
 }
-const warrior = {
+const warrior = { // atributos do guerreiro
   healthPoints: 200,
   strength: 30,
   weaponDmg: 2,
   damage: undefined,
 };
-
-const dragon = {
+const dragon = { // atributos do dragao
   healthPoints: 350,
   strength: 50,
   damage: undefined,
 };
-
 const dragonDamage = () => Math.floor(Math.random() * (dragon.strength - 15) + 15);
 const warriorDamage = () => Math.floor(Math.random() * (warrior.strength - warrior.strength * warrior.weaponDmg) + warrior.strength * warrior.weaponDmg);
-const mageDamage = () => {
+const mageDamage = () => { // calculo do dano do mago
   const damageMana = {
-    critico: Math.floor(Math.random() * (mage.intelligence * mage.cajadoCritico - mage.intelligence) + mage.intelligence / 3),
+    critico: Math.floor(Math.random() * (mage.intelligence + 40) + mage.intelligence / 3),
     dano: Math.floor(Math.random() * (mage.intelligence * mage.cajado - mage.intelligence) + mage.intelligence),
     mana: mage.mana -= 15,
   }
@@ -34,7 +33,7 @@ const mageDamage = () => {
   return damageMana;
 }
 const battleMembers = { mage, dragon };
-const gameActions = {
+const gameActions = { // calculo da rodada
   warriorTurn: (callbackWarrior) => {
     const warriorTurnDamage = callbackWarrior();
     dragon.healthPoints -= warriorTurnDamage;
@@ -47,9 +46,15 @@ const gameActions = {
     mage.damage = mageTurnDamage.dano;
     mage.mana = mageTurnDamage.mana;
     } if (a === 'critico') {
+      let critico = isCritico();
+      if (critico < 3) {
+        dragon.healthPoints -= (mageTurnDamage.critico) * 4;
+        mage.damage = (mageTurnDamage.critico) * 4;
+        mage.mana = mageTurnDamage.mana;
+      }
       dragon.healthPoints -= mageTurnDamage.critico;
-      mage.damage = mageTurnDamage.critico;
-      mage.mana = mageTurnDamage.mana;
+        mage.damage = mageTurnDamage.critico;
+        mage.mana = mageTurnDamage.mana;
     }
   },
   dragonTurn: (callbackDragon) => {
@@ -64,7 +69,7 @@ const defautMage = () => mage.healthPoints = 130;
 const defautDragon = () => dragon.healthPoints = 350;
 let result = [];
 function whoDiesFirst() {
-  for (let i = 0; i < 100000; i += 1) {
+  for (let i = 0; i < 1000; i += 1) {
     defautMage();
     defautDragon();
     while (dragon.healthPoints > 0 && mage.healthPoints > 0) {
@@ -93,23 +98,4 @@ function winner() {
 
 whoDiesFirst();
 winner();
-
-// aqui estão alguns testes, para usar cajado chama 'cajado', para tentar critico use 'critico';
-/* gameActions.mageTurn('critico', mageDamage);
-gameActions.dragonTurn(dragonDamage);
-gameActions.mageTurn('critico', mageDamage);
-gameActions.dragonTurn(dragonDamage);
-gameActions.mageTurn('critico', mageDamage);
-gameActions.dragonTurn(dragonDamage);
-gameActions.mageTurn('critico', mageDamage);
-gameActions.dragonTurn(dragonDamage);
-console.log(gameActions.turnResult());
-*/
-
-/*
-1 - Crie a primeira HOF que compõe o objeto gameActions . Ela será a função que simula o turno do personagem warrior . Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem warrior e atualizará os healthPoints do monstro dragon . Além disto ela também deve atualizar o valor da chave damage do warrior .
-2 - Crie a segunda HOF que compõe o objeto gameActions . Ela será a função que simula o turno do personagem mage . Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem mage e atualizará os healthPoints do monstro dragon . Além disto ela também deve atualizar o valor das chaves damage e mana do mage.
-3 - Crie a terceira HOF que compõe o objeto gameActions . Ela será a função que simula o turno do monstro dragon . Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo monstro dragon e atualizará os healthPoints dos personagens mage e warrior . Além disto ela também deve atualizar o valor da chave damage do monstro.
-4 - Adicione ao objeto gameActions uma função que retorne o objeto battleMembers atualizado e faça um console.log para visualizar o resultado final do turno.
-*/
 

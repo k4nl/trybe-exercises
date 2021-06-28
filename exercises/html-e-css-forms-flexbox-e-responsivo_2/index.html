@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="DatePickerX-master/dist/css/DatePickerX.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="DatePickerX-master/dist/js/DatePickerX.min.js"></script>
+    <title>Formulário</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Currículos</h1>
+        <p>Preencha os campos abaixo</p>
+    </header>
+    <main>
+        <form>
+            <div>
+                <fieldset>
+                    <div class="control">
+                        <label for="name">Nome: </label>
+                        <input class="input" type="text" name="name" id="name" maxlength="40" required>
+                    </div>
+                    <div class="control has-icons-left has-icons-right">
+                        <label for="email">E-mail: </label>
+                        <input class="input" type="email" id="email" name="email" maxlength="50" required placeholder="Email">
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                          <i class="fas fa-check"></i>
+                        </span>
+                    </div>
+                    <div>
+                        <label for="cpf-number">CPF: </label>
+                        <input type="text" id="cpf-number" name="cpf" maxlength="11" required>
+                    </div>
+                    <div>
+                        <label for="adress">Endereço: </label>
+                        <input type="text" id="adress" name="adress" maxlength="200" required>
+                    </div>
+                    <div>
+                        <label for="city">Cidade: </label>
+                        <input type="text" id="city" name="city" maxlength="200" required>
+                    </div>
+                    <div>
+                        <label for="state">Estado: </label>
+                        <select id="state" name="state" required>
+                            <option selected value>Selecione seu estado: </option>
+                        </select>
+                    </div>
+					<div>
+					<fieldset>
+						<legend>Imóvel</legend>
+						<label for="house-type">Casa</label>
+						<input type="radio" name="house-type" id="house" value="house" required>
+						<label for="house-type">Apartamento</label>
+						<input type="radio" name="house-type" id="apartment" value="apartment" required>
+					</fieldset>
+					</div>
+                </fieldset>
+            </div>
+				<div>
+					<fieldset>
+						<div>
+							<label for="resume">Currículo</label>
+							<textarea id="resume" name="resume" maxlength="1000" cols="100" rows="20" required></textarea>
+						</div>
+						<div>
+							<label for="role">Cargo: </label>
+							<input type="text" id="role" name="role" maxlength="40" required></input>
+						</div>
+						<div>
+							<label for="roleDescription">Descrição: </label>
+							<input type="text" id="roleDescription" name="roleDescription" maxlength="500" required></input>
+						</div>
+						<div>
+							<label for="startDate">Data de Inicio: </label>
+							<input type="text" id="startDate" name="startDate" value="" required></input>
+						</div>
+					</fieldset>
+					<button type="sumit">Enviar</button>
+					<button type="reset">Limpar</button>
+				</div>
+        </form>
+    </main>
+    <footer></footer>   
+    <script src="script.js"></script>
+</body>
+</html>
