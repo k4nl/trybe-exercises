@@ -18,4 +18,11 @@ describe('Test if my function', () => {
     expect(obj2).not.toBe(obj3);
   });
 
+  test("Não deveria passar!", () => {
+    setTimeout(() => {
+      expect(10).toBe(5);
+      console.log('Deveria falhar!')
+    }, 500);
+  });
+
 });
